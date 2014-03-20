@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.4'
+gem 'rails', '~> 4.0.4'
 
 
 gem 'pg'
 
-gem 'rails_12factor', '~> 0.0.2'
+gem 'rails_12factor', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -43,9 +43,9 @@ gem 'dotenv-rails', group: [:development]
 
 gem 'less-rails'
 
+ruby "2.0.0"
 # Use unicorn as the app server
-# gem 'unicorn'
-
+#gem 'unicorn'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
