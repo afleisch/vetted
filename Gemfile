@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.0.4'
 
-
 gem 'pg'
 
 gem 'rails_12factor', group: :production
@@ -42,6 +41,8 @@ gem 'better_errors', group: [:development]
 gem 'dotenv-rails', group: [:development]
 
 gem 'less-rails'
+
+gem 'devise', '~> 3.2.4'
 
 ruby "2.0.0"
 # Use unicorn as the app server
