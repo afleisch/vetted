@@ -1,0 +1,9 @@
+<h1> <%=current_user.email%></h1>
+
+<ul>
+<% @profile.things.each do |t| %>
+  </li>
+ <%= link_to t.name, thing_path(t) %>
+  </li>
+<% end %>
+</ul>
