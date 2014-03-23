@@ -7,11 +7,12 @@
    <li>Reason You Love It: <%=@thing.why %></li>
    <li>Where It Is: <%= @address %></li>
   </ul>
+  
+  
+  <%= content_tag "div", id: "map-canvas", data: {long: @thing.longitude, lat: @thing.latitude} do %>
+  <% end %>
 
-<!--   <div>
-    <!-- Google Maps Api Request -->
-	 <!-- <%= link_to image_tag("#{@map_url}"), "#{@map_url}" %> -->
-  </div> 
+ 
 
  <br>
    <%= button_to "delete", @thing, :method => :delete %>
