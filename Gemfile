@@ -42,6 +42,8 @@ gem 'dotenv-rails', group: [:development]
 
 gem 'less-rails'
 
+gem 'geocoder'
+
 gem 'devise', '~> 3.2.4'
 
 ruby "2.0.0"

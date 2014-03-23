@@ -2,7 +2,7 @@
 
 <ul>
 <% @profile.things.each do |t| %>
-  </li>
+  <li>
  <%= link_to t.name, thing_path(t) %>
   </li>
 <% end %>
