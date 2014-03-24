@@ -1,7 +1,7 @@
 <%= form_for @thing do |t| %>
 
-	<%= t.text_field :name, placeholder: "What do you love?" %> <br>
-	<%= t.text_field :category, placeholder: "What type of thing is it?" %> <br>
+	<%= t.text_field :name, placeholder: "Name" %> <br>
+	<%= t.text_field :category, placeholder: "Category" %> <br>
 	<%= t.text_area  :why, placeholder: "Why do you love it?" %> <br>
 	<%= t.text_field :street, placeholder: "Street Address" %> <br>
 	<%= t.text_field :city, placeholder: "City" %> <br>
@@ -10,3 +10,5 @@
 	<%= t.submit %> <br>
 
 <% end %>
+
+<%= link_to "Cancel", profile_path(current_user.id)%>

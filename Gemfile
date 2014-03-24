@@ -46,6 +46,10 @@ gem 'geocoder'
 
 gem 'devise', '~> 3.2.4'
 
+gem 'twitter-bootstrap-rails'
+
+gem 'angularjs-rails'
+
 ruby "2.0.0"
 # Use unicorn as the app server
 #gem 'unicorn'
