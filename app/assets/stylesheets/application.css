@@ -9,12 +9,12 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
-
+ *= require jquery.ui.all
  *= require_tree .
  */
 
 
-#map-canvas { 
+.map-canvas { 
   height: 500px;
   width: 500px; 
 }
@@ -22,4 +22,8 @@
 #info {
   min-width: 200px;
   
+}
+
+.ui-menu { 
+  width: 150px; 
 }

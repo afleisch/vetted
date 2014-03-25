@@ -1,12 +1,36 @@
-<div ng-controller="vetted.SimpleController">
-  
+<div class="container">
 <h1> <%=current_user.email%></h1>
 
-<ul>
-  <li ng-repeat="thing in things">
-  {{thing.name}}
-  </li>
-</ul>
-</div>
-<%= link_to "Add a thing", new_thing_path%>
+<%= link_to "Add a thing", new_thing_path%><br>
 
+<% @things.each do |thing| %>
+  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal<%=thing.id%>">
+    <%= thing.name %>
+  </button><br>
+
+  <div id="modal<%=thing.id%>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel"><%=thing.name%></h4>
+        </div>
+        <div class="modal-body">
+          <h4><%= thing.name %></h4>
+          <ul>
+           <li>Category: <%=thing.category %></li>
+           <li>Reason You Love It: <%=thing.why %></li>
+           <li>Where It Is: <%= thing.city %></li>
+          </ul>
+          <%= content_tag "div", class: "map-canvas", data: {long: thing.longitude, lat: thing.latitude} do %>
+          <% end %><br>
+          <%= button_to "delete", thing, :method => :delete %>
+          <%= button_to "edit", edit_thing_path(thing), :method => :get %>
+          <%= button_to "Return to profile", profile_path(current_user.id), :method => :get %>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
