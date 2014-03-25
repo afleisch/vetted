@@ -7,3 +7,11 @@
       active: false
     });
   });
+
+ $(function() {
+    $( "#menu" ).menu();
+  });
+
+ 
+
+
