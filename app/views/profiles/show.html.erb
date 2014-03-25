@@ -1,12 +1,28 @@
-<div ng-controller="vetted.SimpleController">
-  
+<div class="container">
 <h1> <%=current_user.email%></h1>
 
-<ul>
-  <li ng-repeat="thing in things">
-  {{thing.name}}
-  </li>
-</ul>
-</div>
 <%= link_to "Add a thing", new_thing_path%>
+<br>
+<div class="dropdown" ng-controller="vetted.SimpleController">
+  <a class="dropdown-toggle">
+    Categories
+  </a>
+  <ul class="dropdown-menu">
+    <li ng-repeat="thing in things | unique:'category'">
+      <a>{{thing.category}}</a>
+    </li>
+  </ul>
+</div><br>
+
+<div class="dropdown" ng-controller="vetted.SimpleController">
+  <a class="dropdown-toggle">
+    Location
+  </a>
+  <ul class="dropdown-menu">
+    <li ng-repeat="thing in things | unique:'city'">
+      <a>{{thing.city}}</a>
+    </li>
+  </ul>
+</div>
+</div>
 
