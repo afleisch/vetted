@@ -5,7 +5,7 @@
 
 <% @things.each do |thing| %>
   <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal<%=thing.id%>">
-    <%= thing.name %>
+    <%= thing.name.titleize %>
   </button><br>
 
   <div id="modal<%=thing.id%>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -15,11 +15,11 @@
           <h4 class="modal-title" id="myModalLabel"><%=thing.name%></h4>
         </div>
         <div class="modal-body">
-          <h4><%= thing.name %></h4>
+          <h4><%= thing.name.titleize %></h4>
           <ul>
-           <li>Category: <%=thing.category %></li>
-           <li>Reason You Love It: <%=thing.why %></li>
-           <li>Where It Is: <%= thing.city %></li>
+           <li>Category: <%=thing.category.titleize %></li>
+           <li>Reason You Love It: <%=thing.why.titleize %></li>
+           <li>Where It Is: <%= link_to thing.address, "https://www.google.com/maps/preview?q=#{thing.address}"%></li>
           </ul>
           <%= content_tag "div", class: "map-canvas", data: {long: thing.longitude, lat: thing.latitude} do %>
           <% end %><br>
