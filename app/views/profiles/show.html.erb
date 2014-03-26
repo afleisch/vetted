@@ -23,7 +23,7 @@
           </ul>
           <%= content_tag "div", class: "map-canvas", data: {long: thing.longitude, lat: thing.latitude} do %>
           <% end %><br>
-          <%= button_to "delete", thing, :method => :delete %>
+          <%= button_to "delete", thing, :method => :delete, data: { confirm: "Are you sure?" } %>
           <%= button_to "edit", edit_thing_path(thing), :method => :get %>
           <%= button_to "Return to profile", profile_path(current_user.id), :method => :get %>
           <div class="modal-footer">
