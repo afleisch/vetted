@@ -5,7 +5,7 @@ class ThingsController < ApplicationController
   end
 
   def create
-    new_thing = params.require(:thing).permit(:name, :category, :why, :street, :city, :state, :zip_code)
+    new_thing = params.require(:thing).permit(:name, :category, :why, :street, :city, :state, :zip_code, :image)
     new_thing[:user_id]= current_user.id 
     @thing = Thing.create(new_thing)
     #if the user has entered valid information go to their profile page after 
@@ -37,9 +37,9 @@ class ThingsController < ApplicationController
   def update
     thing_id = params[:id]
     @thing = current_user.things.find(thing_id)
-    new_attributes = params.require(:thing).permit(:name, :category, :why, :street, :state, :zip_code)
+    new_attributes = params.require(:thing).permit(:name, :category, :why, :street, :state, :zip_code, :image)
     @thing.update_attributes(new_attributes)
-    render :show
+    redirect_to profile_path(current_user.id)
   end
 
   def destroy

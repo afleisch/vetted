@@ -12,6 +12,7 @@
         </div>
         <div class="modal-body">
           <h4><%= thing.name.titleize %></h4>
+          <%= image_tag thing.image.url(:thumb) %>
           <ul>
            <li>Category: <%=thing.category.titleize %></li>
            <li>Reason You Love It: <%=thing.why.titleize %></li>
