@@ -1,6 +1,9 @@
 <div class="container">
-<h1> <%=current_user.email%></h1>
+  
+  <h1> <%=current_user.email%></h1>
 
-<%= link_to "Add a thing", new_thing_path, class: "btn btn-default btn-success btn-lg" %><br><br>
+  <%= link_to "Add a thing", new_thing_path, class: "btn btn-default btn-success btn-lg" %><br><br>
 
-<%= render :partial => 'thingshow' %>
+  <%= render :partial => 'thingshow' %>
+
+</div>

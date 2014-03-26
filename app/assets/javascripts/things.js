@@ -1,6 +1,7 @@
 function initialize() {
   initializeMap($('.map-canvas'));
 }
+
 function initializeMap(mapCanvas){
   for (var i=0; i<mapCanvas.length;i++){
   var longitude = $(mapCanvas[i]).data("long");
@@ -28,7 +29,7 @@ function initializeMap(mapCanvas){
   google.maps.event.addListener(marker, 'click', function () {
     infowindow.open(map,marker);
   });
-}
+  }
 }
 
 

@@ -1,6 +1,5 @@
 class ThingsController < ApplicationController
 
-
   def new
     @thing = Thing.new
   end

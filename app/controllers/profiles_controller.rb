@@ -17,6 +17,7 @@ class ProfilesController < ApplicationController
       format.html
       format.json {render :json => @things}
     end
+    
   end
 
 
