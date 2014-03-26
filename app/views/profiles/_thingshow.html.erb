@@ -12,7 +12,9 @@
         </div>
         <div class="modal-body">
           <h4><%= thing.name.titleize %></h4>
-          <%= image_tag thing.image.url(:thumb) %>
+           <% if thing.image.present? %>
+            <%= image_tag thing.image.url(:thumb) %>
+           <% end %>
           <ul>
            <li>Category: <%=thing.category.titleize %></li>
            <li>Reason You Love It: <%=thing.why.titleize %></li>
