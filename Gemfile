@@ -52,6 +52,10 @@ gem 'twitter-bootstrap-rails'
 
 gem 'angularjs-rails'
 
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+
+gem 'aws-sdk', '~> 1.5.7'
+
 ruby "2.0.0"
 # Use unicorn as the app server
 #gem 'unicorn'
