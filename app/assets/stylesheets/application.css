@@ -31,3 +31,26 @@
 body { 
   padding-top: 70px; 
 }
+
+.bg {
+  background : url('/assets/vetted.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: fixed;
+  width: 100%;
+  height: 350px;
+  top:10;
+  left:50;
+  z-index: -1;
+  margin-left: 200px;
+}
+
+.jumbotron {
+  height: 350px;
+  color: white;
+  background:transparent;
+}
+
+#user_email {
+  color: black;
+}

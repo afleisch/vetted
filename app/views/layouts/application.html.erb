@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="VettedApp">
+<html>
 <head>
   <title>Vetted</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -23,6 +23,7 @@
               <li><%= link_to "Edit Profile", edit_user_registration_path, :class => 'navbar-link' %> </li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
             </ul>
+            <a href="/things/new"><button class="btn btn-danger">Add a thing</button></a> 
           <% else %>
             <ul class="nav">
               <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> </li>
@@ -46,7 +47,7 @@
 
       </div>
     </div>
-  </div>
+  </div>  
 
 </body>
 </html>

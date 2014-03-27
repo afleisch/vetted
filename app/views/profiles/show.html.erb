@@ -1,9 +1,14 @@
+<div class="bg"></div>
+<div class="jumbotron">
 <div class="container">
   
-  <h1> <%=current_user.email%></h1>
+</div>
+</div>
 
-  <%= link_to "Add a thing", new_thing_path, class: "btn btn-warning btn-lg" %><br><br>
 
+
+<div class="container">
+<div class="row">
   <%= render :partial => 'thingshow' %>
-
+</div>
 </div>
