@@ -1,4 +1,4 @@
-<%= form_for @thing do |t| %>
+<%= form_for @thing, :html => { :multipart => true } do |t| %>
 
 	<%= t.text_field :name, placeholder: "Name" %> <br>
 	<%= t.text_field :category, placeholder: "Category" %> <br>
@@ -7,6 +7,8 @@
 	<%= t.text_field :city, placeholder: "City" %> <br>
 	<%= t.text_field :state, placeholder: "State" %> <br>
 	<%= t.text_field :zip_code, placeholder: "Zip" %> <br>
+  <p> Upload a photo </p>
+  <%= t.file_field :image %>
 	<%= t.submit %> <br>
 
 <% end %>
