@@ -5,7 +5,7 @@ class ThingsController < ApplicationController
   end
 
   def create
-    new_thing = params.require(:thing).permit(:name, :category, :why, :street, :city, :state, :zip_code, :image)
+    new_thing = params.require(:thing).permit(:name, :category, :why, :street, :city, :state, :zip_code, :image, :image_file_name)
     new_thing[:user_id]= current_user.id 
     @thing = Thing.create(new_thing)
     #if the user has entered valid information go to their profile page after 
