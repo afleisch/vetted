@@ -33,7 +33,7 @@ body {
 }
 
 .bg {
-  background : url('/assets/vetted.png');
+  background : url('vetted.png');
   background-repeat: no-repeat;
   background-size: contain;
   position: fixed;
