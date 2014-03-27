@@ -1,7 +1,7 @@
 <% @things.each do |thing| %>
   <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal<%=thing.id%>">
     <%= thing.name %>
-  </button><br><br>
+  </button>
 
   <div id="modal<%=thing.id%>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
