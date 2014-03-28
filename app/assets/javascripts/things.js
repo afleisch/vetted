@@ -13,6 +13,7 @@ function initializeMap(mapCanvas){
   var map = new google.maps.Map(mapCanvas[i],
       mapOptions);
 
+
   var contentString ='<div id="info">' +
   '<a href="https://maps.google.com"/>Get Directions</a>' +
   '</div>';
@@ -30,8 +31,5 @@ function initializeMap(mapCanvas){
     infowindow.open(map,marker);
   });
   }
-}
-
-
-
-  google.maps.event.addDomListener(window, 'load', initialize);
+} 
+google.maps.event.addDomListener(window, 'load', initialize);
