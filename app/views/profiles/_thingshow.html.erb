@@ -9,8 +9,6 @@
 </div>
 
   <div id="modal<%=thing.id%>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal<%=thing.id%>" aria-hidden="true">
-    <div class="">
-      <div class="">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
           <h4 class="modal-title" id="modal<%=thing.id%>Label"><%=thing.name%></h4>
@@ -28,11 +26,9 @@
            <li>Where It Is: <%= link_to thing.address, 
            "https://www.google.com/maps/preview?q=#{thing.address}"%></li>
           </ul>
-           <%= content_tag "div", class: "map-canvas", data: {long: thing.longitude, lat: thing.latitude} do %>
+           <%= content_tag "div", class: "map-canvas", data: {long: thing.longitude, lat: thing.latitude, id: thing.id} do %>
            <% end %><br>
           
           </div>
-      </div>
     </div>
-  </div>
 <% end %>
