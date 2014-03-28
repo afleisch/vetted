@@ -12,6 +12,7 @@ function initializeMap(mapCanvas){
       center: new google.maps.LatLng(latitude, longitude),
       zoom: 15
      };
+
     maps['modal' + id] = new google.maps.Map(mapCanvas[i],
         mapOptions);
 
@@ -20,6 +21,7 @@ function initializeMap(mapCanvas){
        console.log("resizing the map");
        google.maps.event.trigger(maps[event.currentTarget.id], "resize");
     });
+    
     var contentString ='<div id="info">' +
     '<a href="https://maps.google.com"/>Get Directions</a>' +
     '</div>';
